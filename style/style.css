@@ -98,25 +98,91 @@ main {
 .newArticles {
   grid-area: newArticles;
   background-color: hsl(240, 100%, 5%);
-  padding: 20px;
+  padding: 0 24px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  justify-content: flex-end;
 }
 
 .newArticles h3 {
   color: hsl(35, 77%, 62%);
   font-weight: 700;
-  font-size: xx-large;
+  font-size: 42px;
+  margin-top: 20px;
 }
 
 .newArticles article {
-  color: white;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.newArticles article h4 {
+  color: hsl(36, 100%, 99%);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.newArticles article h4:hover {
+  color: hsl(35, 77%, 62%);
+  cursor: pointer;
+}
+
+.newArticles article p {
+  color: hsl(233, 8%, 79%);
+  line-height: 30px;
+}
+
+.newArticles article:nth-child(2), .newArticles article:nth-child(3) {
+  border-bottom: 1px solid hsl(236, 13%, 42%);
+}
+
+.topRelated {
+  width: 70vw;
+  margin: 72px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.topRelated article {
+  display: flex;
+}
+
+.topRelated img {
+  height: 125px;
+}
+
+.topRelated__description {
+  margin-left: 20px;
+}
+
+.topRelated__description h3 {
+  font-size: 32px;
+  color: hsl(233, 8%, 79%);
+}
+
+.topRelated__description h4 {
+  font-weight: 800;
+  font-size: 17px;
+  margin: 10px 0;
+}
+
+.topRelated__description h4:hover {
+  color: hsl(5, 85%, 63%);
+  cursor: pointer;
+}
+
+.topRelated__description p {
+  color: hsl(236, 13%, 42%);
+  font-size: 15px;
+  line-height: 22px;
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-bottom: 16px;
 }
 
 .attribution a {
