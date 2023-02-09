@@ -26,11 +26,11 @@ header {
   display: none;
 }
 
-.navBar {
+.navBar, .navBar__window {
   display: flex;
 }
 
-.navBar__close {
+.navBar__closeButton {
   display: none;
 }
 
@@ -211,12 +211,42 @@ main {
     display: block;
     margin: auto 0;
   }
-  
-  .navBar__close.active {
-    display: block;
-  }
 
   .navBar {
-    display: none;
+    height: 100vh;
+    width: 100vw;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    transform: translateX(200%);
+    transition: .5s ease-out;
+
+    justify-content: flex-end;
+
+    background-color: rgba(98, 101, 103, 0.5);
+  }
+
+  .navBar__window {
+    width: 300px;
+    justify-content: space-between;
+    background-color: #fff;
+  }
+  
+  .navBar__closeButton {
+    display: block;
+    order: 2;
+  }
+
+  .navBar.open {
+    transform: translateX(0%);
+  }
+
+  .navBar ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
   }
 }

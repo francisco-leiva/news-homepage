@@ -1,7 +1,11 @@
 const hamburger = document.querySelector('.hamburger');
-const hamburgerClose = document.querySelector('.navBar__close');
+const hamburgerCloseButton = document.querySelector('.navBar__closeButton');
+const navBar = document.querySelector('.navBar');
 
 hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    hamburgerClose.classList.toggle('active');
-})
+    navBar.classList.toggle('open');
+});
+
+hamburgerCloseButton.addEventListener('click', () => {
+    navBar.classList.toggle('open');
+});
