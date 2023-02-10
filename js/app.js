@@ -1,11 +1,13 @@
 const hamburger = document.querySelector('.hamburger');
 const hamburgerCloseButton = document.querySelector('.navBar__closeButton');
 const navBar = document.querySelector('.navBar');
+const navBarWindow = document.querySelector('.navBar__window');
 
-hamburger.addEventListener('click', () => {
+const navBarToggleClasses = () => {
     navBar.classList.toggle('open');
-});
+    navBarWindow.classList.toggle('open');
+}
 
-hamburgerCloseButton.addEventListener('click', () => {
-    navBar.classList.toggle('open');
-});
+hamburger.addEventListener('click', navBarToggleClasses);
+
+hamburgerCloseButton.addEventListener('click', navBarToggleClasses);

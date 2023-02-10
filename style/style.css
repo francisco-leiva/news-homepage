@@ -207,6 +207,10 @@ main {
 }
 
 @media screen and (max-width: 850px) {
+  header {
+    width: 95vw;
+  }
+
   .hamburger {
     display: block;
     margin: auto 0;
@@ -221,32 +225,88 @@ main {
     right: 0;
     z-index: 2;
     transform: translateX(200%);
-    transition: .5s ease-out;
 
     justify-content: flex-end;
 
     background-color: rgba(98, 101, 103, 0.5);
   }
 
+  .navBar.open {
+    transform: translateX(0%);
+  }
+
   .navBar__window {
-    width: 300px;
+    width: 260px;
     justify-content: space-between;
     background-color: #fff;
+
+    transform: translateX(200%);
+    transition: .5s ease-out;
+  }
+
+  .navBar__window.open {
+    transform: translateX(0%);
   }
   
   .navBar__closeButton {
     display: block;
     order: 2;
-  }
 
-  .navBar.open {
-    transform: translateX(0%);
+    margin-top: 25px;
+    margin-right: 25px;
   }
 
   .navBar ul {
     flex-direction: column;
-    justify-content: center;
     align-items: flex-start;
     gap: 30px;
+
+    margin-top: 140px;
+    margin-left: 20px;
+  }
+
+  .navBar ul li a {
+    color: black;
+    font-size: 18px;
+  }
+
+  main {
+    width: 95vw;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 600px 415px;
+    gap: 50px;
+    grid-template-areas: 
+      "mainArticle"
+      "newArticles";
+  }
+
+  .mainArticle {
+    grid-area: mainArticle;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 23% 21%;
+    gap: 3%;
+    grid-template-areas: 
+      "img"
+      "title"
+      "description";
+  }
+
+  .newArticles {
+    justify-content: flex-start;
+  }
+
+  .topRelated {
+    width: 95vw;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  main {
+    grid-template-rows: 800px 500px;
   }
 }
