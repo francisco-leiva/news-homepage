@@ -274,7 +274,7 @@ main {
     width: 95vw;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 600px 415px;
+    grid-template-rows: 600px min-content;
     gap: 50px;
     grid-template-areas: 
       "mainArticle"
@@ -285,7 +285,7 @@ main {
     grid-area: mainArticle;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 50% 23% 21%;
+    grid-template-rows: 50% 24% 20%;
     gap: 3%;
     grid-template-areas: 
       "img"
@@ -305,8 +305,8 @@ main {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 490px) {
   main {
-    grid-template-rows: 800px 500px;
+    grid-template-rows: 800px min-content;
   }
 }
