@@ -1,4 +1,4 @@
-# Frontend Mentor - News homepage solution
+# News homepage from Fontend mentor
 
   
 
@@ -58,7 +58,7 @@ Users should be able to:
 
   
 
-- Solution URL: [Click here](https://github.com/francisco-leiva/news-homepage)
+- Github: [Click here](https://github.com/francisco-leiva/news-homepage)
 
 - Live Site URL: [Click here](https://news-homepage-franciscoleiva.netlify.app/)
 
@@ -91,5 +91,3 @@ Users should be able to:
   
 
 - [LinkedIn](https://www.linkedin.com/in/franciscoleiva14/)
-
-- Frontend Mentor - [@francisco-leiva](https://www.frontendmentor.io/profile/francisco-leiva)
